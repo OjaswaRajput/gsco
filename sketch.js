@@ -41,17 +41,21 @@ function draw() {
     textSize(25);
     fill("red");
     text("Thickness = 50",25,590);
+   score = Math.round(random(10,200,+5));
+
   if(car.isTouching){
-    gameState = END;
-     
-      car.velocityY = 0;
-      
-      car.shapeColor = random(255,0,0,255,0,0,0,255,0
-    )
+   
+      car.velocityY = 0 ;
+    var deformation = 0.5*weight*score*score/22509;
+    if (deformation<100){
+       car.shapeColor =color(255,0,0 )
   }
-  
-  if (gameState === END){
-    car.velocityY = 0 ;
+        if (deformation>180){
+       car.shapeColor =color(230,230,0 )
+  }
+        if (deformation<100 && deformation>180){
+       car.shapeColor =color(0,255,0 )
+  }
     car.y = 700;
     textSize(25);
     fill("red");
@@ -59,14 +63,15 @@ function draw() {
     textSize(30)
     fill("blue");
     text("Damage = " + score,100,300);
-    score = Math.round(random(10,200,+5)); 
-  
-    if (!paused) {
-  	ourFrameCount++;
+   
+      
+    
   }
-    }
-    drawSprites();
   
+  
+ 
+   
+    drawSprites();  
   
 
 }
