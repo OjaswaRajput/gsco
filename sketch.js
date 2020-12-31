@@ -1,5 +1,5 @@
 var car,carImage;
-var wall;
+var wall,wall2;
 var score;
 var weight;
 var gameState = PLAY;
@@ -48,15 +48,15 @@ function draw() {
       car.velocityY = 0 ;
     var deformation = 0.5*weight*score*score/22509;
     if (deformation<100){
-       car.shapeColor =color(255,0,0 )
+       car.shapeColor =color(255,0,0 );
   }
         if (deformation>180){
-       car.shapeColor =color(230,230,0 )
+       car.shapeColor =color(230,230,0 );
   }
         if (deformation<100 && deformation>180){
-       car.shapeColor =color(0,255,0 )
+       car.shapeColor =color(0,255,0 );
   }
-    car.y = 700;
+    car.y < 700;
     textSize(25);
     fill("red");
     text("PRESS F5 OR RESTART PAGE",25,100);
