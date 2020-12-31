@@ -56,7 +56,7 @@ function draw() {
         if (deformation<100 && deformation>180){
        car.shapeColor =color(0,255,0 );
   }
-    car.y < 700;
+    car.y>700;
     textSize(25);
     fill("red");
     text("PRESS F5 OR RESTART PAGE",25,100);
