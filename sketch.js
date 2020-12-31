@@ -24,7 +24,7 @@ function draw() {
   car.shapeColor = "white";
   speed = random(54,90);
   weight = random(400,1500);
-    car.velocityY = 3;
+    car.velocityY = 10;
      wall2 = createSprite(100,400,800,100);
      car.depth = wall2.depth
      car.depth = car.depth
